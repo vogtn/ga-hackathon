@@ -1,8 +1,22 @@
 angular.module('AppCtrl', ['AppServices'])
 .controller('SignupCtrl', ['$scope', '$http', '$state', function($scope, $http, $state) {
     $scope.user = {
+        name: '',
         email: '',
-        password: ''
+        password: '',
+        portfolio: ''.
+        userType: '',
+        profilePic: '',
+        bio: '',
+        frontDev: false,
+        backDev: false,
+        fullDev: false,
+        mobileDev: false,
+        visualUX: false,
+        interfaceUX: false,
+        interationUX: false,
+        frontUX: false,
+
     };
     $scope.userSignup = function() {
         // to implement
