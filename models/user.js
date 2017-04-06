@@ -11,7 +11,31 @@ var UserSchema = mongoose.Schema({
   password: {
     type: String,
     required: true
-  }
+  },
+  portfolio: {
+    type: String,
+    required: true
+  },
+  userType: {
+    type: String,
+    required: true
+  },
+  profilePic: {
+    type: String,
+    required: true
+  },
+  bio: {
+    type: Text,
+    required: true
+  },
+  frontDev: null,
+  backDev: null,
+  fullDev: null,
+  mobileDev: null,
+  visualUX: null,
+  interfaceUX: null,
+  interacationUX: null,
+  frontUX: null
 });
 
 UserSchema.set('toJSON', {
@@ -19,7 +43,19 @@ UserSchema.set('toJSON', {
     var returnJson = {
       id: ret._id,
       email: ret.email,
-      name: ret.name
+      name: ret.name,
+      portfolio: ret.portfolio,
+      userType: ret.userType,
+      profilePic: ret.profilePic,
+      bio: ret.bio,
+      frontDev: ret.frontDev,
+      backDev: ret.backDev,
+      fullDev: ret.fullDev,
+      mobileDev: ret.mobileDev,
+      visualUX: ret.visualUX,
+      interfaceUX: ret.interfaceUX,
+      interacationUX: ret.interacationUX,
+      frontUX: ret.frontUX
     };
     return returnJson;
   }
