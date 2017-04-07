@@ -34,7 +34,7 @@ var UserSchema = mongoose.Schema({
   mobileDev: Boolean,
   visualUX: Boolean,
   interfaceUX: Boolean,
-  interacationUX: Boolean,
+  interactionUX: Boolean,
   frontUX: Boolean
 });
 
@@ -54,7 +54,7 @@ UserSchema.set('toJSON', {
       mobileDev: ret.mobileDev,
       visualUX: ret.visualUX,
       interfaceUX: ret.interfaceUX,
-      interacationUX: ret.interacationUX,
+      interactionUX: ret.interactionUX,
       frontUX: ret.frontUX
     };
     return returnJson;
