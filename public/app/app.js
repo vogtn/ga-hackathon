@@ -30,6 +30,11 @@ app.config([
     .state('404', {
         url: '/404',
         templateUrl: 'app/views/404.html'
+    })
+    .state('user',{
+        url: '/user/:id',
+        templateUrl: 'app/views/user.html',
+        controller: 'InfoCtrl'
     });
     $locationProvider.html5Mode(true);
     }])

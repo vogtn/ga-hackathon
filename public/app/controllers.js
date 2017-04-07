@@ -54,7 +54,7 @@ angular.module('AppCtrl', ['AppServices'])
 // .controller('AlertsCtrl', ['$scope', 'Alerts', function($scope, Alerts){
 //     $scope.alerts = Alerts.getAll();
 // }])
-.controller('NavCtrl', ['$scope', 'Auth', '$location', function($scope, Auth, $location) {
+.controller('NavCtrl', ['$scope', 'Auth', '$location', '$state', function($scope, Auth, $location, $state) {
   $scope.isLoggedIn = function() {
     return Auth.isLoggedIn();
   }
