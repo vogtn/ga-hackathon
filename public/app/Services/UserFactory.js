@@ -5,7 +5,7 @@ angular.module('App')
             return $http.get('/api/users');
         },
         getUser: function(id){
-            return $http.get("/api/users" + id);
+            return $http.get("/api/users/" + id);
         }
     }
 }])
