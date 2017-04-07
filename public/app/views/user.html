@@ -3,20 +3,22 @@
         <a class="navbar-brand" id="logo" href="/"></a>
     </div>
 </nav>
-<div class="col-sm-6 col-sm-offset-3">
-<div class-"well">
+<div class="col-sm-4 col-sm-offset-4">
+
 <img ng-src="{{user.profilePic}}" class="prof">
 <h1> {{user.name}}</h1>
 <h3>{{user.username}}</h3>
-<h4>{{user.email}}</h4>
+<h4><a href="mailto:{{user.email}}">Contact Me</a></h4>
 <h3>{{user.portfolio}}</h3>
 <br>
 <h2>Portfolio</h2>
-</div>
+
+
 
 <h3>Projects</h3>
-<div class="well" ng-repeat="p in allProject | filter:{projectPoster: user.id}">
+<div ng-repeat="p in allProject | filter:{projectPoster: user.id}">
   <p>{{p.projectTitle}}</p>
   <p>{{p.projectBody}}</p>
   <p>{{p.projectDate}}</p>
+</div>
 </div>
