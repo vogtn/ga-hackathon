@@ -1,18 +1,24 @@
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <a class="navbar-brand" id="logo" href="/"></a>
+    </div>
+</nav>
 <div class="container">
     <div class="row">
-        <div class="well" ng-if="type == 'des'" ng-repeat="user in users | filter:{userType: 'dev'}">
-            <a href="/user/{{user.id}}"><img ng-src="{{user.profilePic}}">
-            <p>Email: {{user.email}}</p>
-            <p>Username: {{user.name}}</p>
-            <p>Portfolio: {{user.portfolio}}</p>
-            <p>Developer</p></a>
+        <div ng-if="type == 'des'" ng-repeat="user in users | filter:{userType: 'dev'}">
+            <div class="col-xs-4 user">   
+                <a href="/user/{{user.id}}"><img class="prof" ng-src="{{user.profilePic}}">
+                <h2 class="text-center">{{user.name}}</h2>
+                <h4 class="text-center">Developer</h4></a>
+            </div>
         </div>
-        <div class="well" ng-if="type == 'dev'" ng-repeat="user in users | filter:{userType: 'des'}">
-            <a href="/user/{{user.id}}"><img ng-src="{{user.profilePic}}">
-            <p>Email: {{user.email}}</p>
-            <p>Username: {{user.name}}</p>
-            <p>Portfolio: {{user.portfolio}}</p>
-            <p>Designer</p></a>
+        
+        <div ng-if="type == 'dev'" ng-repeat="user in users | filter:{userType: 'des'}">
+            <div class="col-xs-4 user"> 
+                <a href="/user/{{user.id}}"><img class="prof" ng-src="{{user.profilePic}}">
+                <h2 class="text-center">{{user.name}}</h2>
+                <h4 class="text-center">Designer</h4></a>
+            </div>
         </div>
     </div>
 </div>
