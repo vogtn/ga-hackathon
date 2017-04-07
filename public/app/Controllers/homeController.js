@@ -1,6 +1,7 @@
 angular.module('App')
 .controller('UserCtrl', ['$scope', '$http', '$state', 'Auth', 'UserFactory', function($scope, $http, $state, Auth, UserFactory) {
     $scope.users;
+    $scope.type = Auth.currentUser().userType
     getAllUsers();
     
     function getAllUsers(){
