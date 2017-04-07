@@ -1,13 +1,15 @@
 
 <div class="well" ng-if="type == 'des'" ng-repeat="user in users | filter:{userType: 'dev'}">
-    <p>{{user.email}}</p>
-    <p>{{user.name}}</p>
-    <p>{{user.portfolio}}</p>
+    <img src="user.profilePic">
+    <p>Email: {{user.email}}</p>
+    <p>Username: {{user.name}}</p>
+    <p>Portfolio: {{user.portfolio}}</p>
     <p>{{user.userType}}</p>
 </div>
 <div class="well" ng-if="type == 'dev'" ng-repeat="user in users | filter:{userType: 'des'}">
-    <p>{{user.email}}</p>
-    <p>{{user.name}}</p>
-    <p>{{user.portfolio}}</p>
+    <img src="user.profilePic">
+    <p>Email: {{user.email}}</p>
+    <p>Username: {{user.name}}</p>
+    <p>Portfolio: {{user.portfolio}}</p>
     <p>{{user.userType}}</p>
 </div>
