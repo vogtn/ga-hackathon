@@ -6,10 +6,10 @@
   <legend><p>Let's Get You Started!</p></legend>
   <div class="form-bg">
   <div class="form-group">
-    <input type="text" class="form-control" id="name" placeholder="Corn Name" ng-model="user.name">
+    <input type="text" class="form-control" id="name" placeholder="Your Name" ng-model="user.name">
   </div>
   <div class="form-group">
-    <input type="email" class="form-control" id="email" placeholder="test@test.com" ng-model="user.email">
+    <input type="email" class="form-control" id="email" placeholder="test@email.com" ng-model="user.email">
   </div>
   <div class="form-group">
     <input type="password" class="form-control" id="password" placeholder="********" ng-model="user.password">
@@ -18,20 +18,21 @@
     <input type="text" class="form-control" id="portfolio" placeholder="Portfolio link" ng-model="user.portfolio">
   </div>
   <div class="form-group">
+    <input type="text" class="form-control" id="profilePic" placeholder="Profile Picture link" ng-model="user.profilePic">
+  </div>
+  <div class="form-group">
+    <textarea class="form-control" id="bio" ng-model="user.bio" placeholder="Tell us about yourself..." length="200"></textarea>
+  </div>
+  <!--###############################-->
+  <div class="form-group option">
     <select name="userType" ng-model="user.userType">
       <option value="" disabled selected>I am a...</option>
       <option value="dev">Developer</option>
       <option value="des">Designer</option>
     </select>
   </div>
-  <div class="form-group">
-    <input type="text" class="form-control" id="profilePic" placeholder="Image link" ng-model="user.profilePic">
-  </div>
-  <div class="form-group">
-    <textarea class="form-control" id="bio" ng-model="user.bio" placeholder="Tell us about yourself..." length="200"></textarea>
-  </div>
 
-      <div class="devGroup" ng-show="user.userType == 'dev'">
+      <div class="group" ng-show="user.userType == 'dev'">
           <p>
             <input
               id="frontDev"
@@ -71,7 +72,7 @@
             <label for="mobileDev">Mobile Developer</label>
           </p> 
         </div>
-        <div class="desGroup" ng-show="user.userType == 'des'">
+        <div class="group" ng-show="user.userType == 'des'">
           <p>
             <input
               id="visualUX"
@@ -114,10 +115,10 @@
           </p>
           <!--designer close-->
         </div>
+          <button type="submit" class="btn btn-danger btn-lg suBtn">Signup</button>
         </div> 
 
 
-  <button type="submit" class="btn btn-primary">Signup</button>
 </form>
 </div>
 </div>
