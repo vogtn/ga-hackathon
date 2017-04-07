@@ -35,7 +35,12 @@ app.config([
         url: '/user/:id',
         templateUrl: 'app/views/user.html',
         controller: 'InfoCtrl'
-    });
+    })
+    .state('projects',{
+        url: '/projects',
+        templateUrl: 'app/views/projects.html',
+        controller: 'InfoCtrl'
+    })
     $locationProvider.html5Mode(true);
     }])
     .config(["$httpProvider", function($httpProvider) {
