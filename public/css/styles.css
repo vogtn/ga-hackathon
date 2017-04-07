@@ -1,0 +1,20 @@
+#box { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: block;
+}
+
+#box:first-child {
+    -webkit-clip-path: polygon(0 0, 0 100vh, 100% 100vh);
+    clip-path: polygon(0 0, 0 100vh, 100% 100vh);
+    background: #d6d6d6;
+}
+
+#box:last-child {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh);
+    clip-path: polygon(0 0, 100% 0, 100% 100vh);
+    background: #212121;
+}
