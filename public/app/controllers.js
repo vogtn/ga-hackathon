@@ -4,7 +4,7 @@ angular.module('AppCtrl', ['AppServices'])
         name: '',
         email: '',
         password: '',
-        portfolio: ''.
+        portfolio: '',
         userType: '',
         profilePic: '',
         bio: '',

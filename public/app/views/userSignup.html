@@ -1,6 +1,12 @@
+<div class="col-sm-6 col-sm-offset-3">
+
 <form ng-submit="userSignup()">
   <legend>Signup</legend>
 
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Corn Name" ng-model="user.name">
+  </div>
   <div class="form-group">
     <label for="email">Email</label>
     <input type="email" class="form-control" id="email" placeholder="test@test.com" ng-model="user.email">
@@ -9,6 +15,112 @@
     <label for="password">Password</label>
     <input type="password" class="form-control" id="password" placeholder="********" ng-model="user.password">
   </div>
+  <div class="form-group">
+    <label for="portfolio">Portfolio Link</label>
+    <input type="text" class="form-control" id="portfolio" placeholder="Portfolio link" ng-model="user.portfolio">
+  </div>
+  <div class="form-group">
+    <label for="userType">What Do You Call Yourself?</label>
+    <select name="userType" ng-model="user.userType">
+      <option value="" disabled selected>I am a...</option>
+      <option value="dev">Developer</option>
+      <option value="des">Designer</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="profilePic">Profile Picture</label>
+    <input type="text" class="form-control" id="profilePic" placeholder="Image link" ng-model="user.profilePic">
+  </div>
+  <div class="form-group">
+    <label for="bio">Tell Us About Yourself!</label>
+    <textarea class="form-control" id="bio" ng-model="user.bio" length="200"></textarea>
+  </div>
+
+      <div class="devGroup" ng-show="user.userType == 'dev'">
+          <p>
+            <input
+              id="frontDev"
+              type="radio"
+              name="skillsGroup"
+              value="frontDev"
+              ng-model="user.frontDev">
+            <label for="frontDev">Front End Developer</label>
+          </p>
+          <p>
+            <input
+              id="backDev"
+              type="radio"
+              name="skillsGroup"
+              value="backDev"
+              ng-model="user.backDev">
+            <label for="backDev">Back End Developer</label>
+          </p>
+          <p>
+            <input
+              id="fullDev"
+              type="radio"
+              name="skillsGroup"
+              class="filled-in"
+              value="fullDev"
+              ng-model="user.fullDev">
+            <label for="fullDev">Full Stack Developer</label>
+          </p> 
+          <p>
+            <input
+              id="mobileDev"
+              type="radio"
+              name="skillsGroup"
+              class="filled-in"
+              value="mobileDev"
+              ng-model="user.mobileDev">
+            <label for="mobileDev">Mobile Developer</label>
+          </p> 
+        </div>
+        <div class="desGroup" ng-show="user.userType == 'des'">
+          <p>
+            <input
+              id="visualUX"
+              type="radio"
+              name="skillsGroup"
+              class="filled-in"
+              value="visualUX"
+              ng-model="user.visualUX">
+            <label for="visualUX">Visual Design</label>
+          </p>
+          <p>
+            <input
+              id="interfaceUX"
+              type="radio"
+              name="skillsGroup"
+              class="filled-in"
+              value="interfaceUX"
+              ng-model="user.interfaceUX">
+            <label for="interfaceUX">Interface Design</label>
+          </p>
+          <p>
+            <input
+              id="interactionUX"
+              type="radio"
+              name="skillsGroup"
+              class="filled-in"
+              value="interactionUX"
+              ng-model="user.interactionUX">
+            <label for="interactionUX">Interaction Design</label>
+          </p>
+          <p>
+            <input
+              id="frontUX"
+              type="radio"
+              name="skillsGroup"
+              class="filled-in"
+              value="frontUX"
+              ng-model="user.frontUX">
+            <label for="frontUX">Front End Design</label>
+          </p>
+          <!--designer close-->
+        </div> 
+
 
   <button type="submit" class="btn btn-primary">Signup</button>
 </form>
+</div>

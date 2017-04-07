@@ -25,17 +25,17 @@ var UserSchema = mongoose.Schema({
     required: true
   },
   bio: {
-    type: Text,
+    type: String,
     required: true
   },
-  frontDev: null,
-  backDev: null,
-  fullDev: null,
-  mobileDev: null,
-  visualUX: null,
-  interfaceUX: null,
-  interacationUX: null,
-  frontUX: null
+  frontDev: Boolean,
+  backDev: Boolean,
+  fullDev: Boolean,
+  mobileDev: Boolean,
+  visualUX: Boolean,
+  interfaceUX: Boolean,
+  interacationUX: Boolean,
+  frontUX: Boolean
 });
 
 UserSchema.set('toJSON', {
