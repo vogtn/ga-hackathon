@@ -1,8 +1,16 @@
 <nav class="navbar navbar-default">
+    
     <div class="navbar-header">
         <a class="navbar-brand" id="logo" href="/"></a>
     </div>
 </nav>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+            <a href="/projects" class="btn btn-primary btn-block">Create Project!</a>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="row">
         <div ng-if="type == 'des'" ng-repeat="user in users | filter:{userType: 'dev'}">

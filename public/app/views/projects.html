@@ -1,32 +1,33 @@
-<h1>Create A Project</h1>
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <a class="navbar-brand" id="logo" href="/"></a>
+    </div>
+</nav>
+
+<div class="col-sm-6 col-sm-offset-3">
 <form ng-submit="createProject()">
   <legend>Create Project</legend>
-
+  <div class="project-bg">
   <div class="form-group">
-    <label for="projectTitle">Project Title</label>
-    <input type="text" class="form-control" id="projectTitle" placeholder="Corn Name" ng-model="project.projectTitle">
+    <input type="text" class="form-control" id="projectTitle" placeholder="Project Name" ng-model="project.projectTitle">
   </div>
   <div class="form-group">
-    <label for="projectBody">Tell Us About Your Project</label>
-    <input type="text" class="form-control" id="email" placeholder="Details" ng-model="project.projectBody">
+    <input type="text" class="form-control" id="email" placeholder="Project Details" ng-model="project.projectBody">
   </div>
   <div class="form-group">
-    <label for="projectDate">Need Project Done By:</label>
     <input type="date" class="form-control" id="projectDate" ng-model="project.projectDate">
   </div>
   <div class="form-group">
-    <label for="projectPrice">How Much Are You Willing To Pay</label>
-    <input type="number" class="form-control" id="projectPrice" placeholder="$$$" ng-model="project.projectPrice">
+    <input type="number" class="form-control" id="projectPrice" placeholder="How Much?" ng-model="project.projectPrice">
   </div>
   <div class="form-group">
-    <label for="projectPicture">Add a picture!</label>
-    <input type="text" class="form-control" id="projectPic" placeholder="url" ng-model="project.projectPic">
-  </div>
- <div class="form-group">
-    <label for="projectPoster"></label>
+    <input type="text" class="form-control" id="projectPic" placeholder="Project Screenshot Link" ng-model="project.projectPic">
+    </div>
+  <div class="form-group">
     <input type="hidden" class="form-control" id="projectPoster" ng-model="project.projectPoster" value={{user.id}}>
   </div>
-  <button type="submit" class="btn btn-primary">Signup</button>
+  <button type="submit" class="btn btn-danger pjBtn">Create!</button>
+  </div>
   </form>
 
-  </div>
+</div>

@@ -39,6 +39,14 @@ legend {
     padding-bottom: 10px;
 }
 
+.project-bg {
+    background-color: #4C5964;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .form-control {
     height: 50px;
     width: 75%;
@@ -58,6 +66,11 @@ legend {
 }
 
 .suBtn {
+    margin-left: 43%;
+    text-align: center;
+}
+
+.pjBtn {
     margin-left: 43%;
     text-align: center;
 }
