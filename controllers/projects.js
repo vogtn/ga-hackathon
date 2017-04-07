@@ -4,10 +4,10 @@ var router = express.Router();
 
 router.route('/')
   .get(function(req, res) {
-    Project.find(function(err, users) {
+    Project.find(function(err, projects) {
       if (err) return res.status(500).send(err);
 
-      return res.send();
+      return res.send(projects);
     });
   })
   .post(function(req, res) {
