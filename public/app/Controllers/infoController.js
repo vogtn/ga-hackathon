@@ -1,9 +1,19 @@
 angular.module('App')
 .controller('InfoCtrl', ['$scope', '$http', '$state', 'Auth', 'UserFactory', '$stateParams', 'ProjectFactory', function($scope, $http, $state, Auth, UserFactory, $stateParams, ProjectFactory) {
     $scope.user;
-    $scope.userId = Auth.currentUser().id
+    $scope.userId = Auth.currentUser().id;
+    $scope.allProject;
 
-    UserFactory.getUser($scope.userId)
+    ProjectFactory.getAllProjects()
+    .then(
+        function success(res){
+            $scope.allProject = res.data;
+            console.log(res)
+        },
+        function error(err){console.log('error')}
+    )
+
+    UserFactory.getUser($stateParams.id)
     .then(
         function success(res){
             $scope.user = res.data
@@ -25,6 +35,7 @@ angular.module('App')
 
         $http.post('/api/projects', $scope.projects).then(function success(res){
             console.log($scope.projects)
+            $state.go('user', {id: $scope.userId})
             console.log(res)
         })
     }
