@@ -4,14 +4,14 @@ var router = express.Router();
 
 router.route('/')
   .get(function(req, res) {
-    Project.find(function(err, users) {
+    Project.find(function(err, projects) {
       if (err) return res.status(500).send(err);
 
-      return res.send();
+      return res.send(projects);
     });
   })
   .post(function(req, res) {
-      Project.create(req.body, function(err, user) {
+      Project.create(req.body, function(err, projects) {
         if (err) return res.status(500).send(err);
 
         return res.send(user);
@@ -19,10 +19,10 @@ router.route('/')
   });
 
 router.get('/:id', function(req, res) {
-  Project.findById(req.params.id, function(err, user) {
+  Project.findById(req.params.id, function(err, projects) {
     if (err) return res.status(500).send(err);
 
-    return res.send(user);
+    return res.send(projects);
   });
 });
 
