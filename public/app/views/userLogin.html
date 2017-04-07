@@ -1,16 +1,20 @@
-<div class="col-sm-6 col-sm-offset-3">
+<div class="signup">
+<div class="col-sm-6 col-sm-offset-3" id="form">
   <form ng-submit="userLogin()">
     <legend>Login</legend>
-    <a href="/signup">New User? <small>Sign up</small></a>
+    <div class="form-bg">
+      <div class="form-group text-center">
+        <a href="/signup">New User? <small>Sign up</small></a>
+     </div>
 
     <div class="form-group">
-      <label for="email">Email</label>
       <input type="email" class="form-control" id="email" placeholder="test@test.com" ng-model="user.email">
     </div>
     <div class="form-group">
-      <label for="password">Password</label>
       <input type="password" class="form-control" id="password" placeholder="********" ng-model="user.password">
     </div>
-    <button type="submit" class="btn btn-primary btn-block">Login</button>
+    <button type="submit" class="btn btn-primary btn-lg suBtn">Login</button>
+    </div>
   </form>
+</div>
 </div>

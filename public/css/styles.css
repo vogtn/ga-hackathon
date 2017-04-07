@@ -9,7 +9,7 @@ h1, h2, h3, h4, p, li, a {
     min-height: 100vh;
 }
 
-#signup {
+.signup {
     background: url("../img/signup-bg.png") no-repeat center;
     max-width: 100vw;
     min-height: 1000px;
@@ -72,6 +72,7 @@ legend {
 
 .prof {
     width: 200px;
+    height: 200px;
     border-radius: 100%;
 }
 
