@@ -9,6 +9,44 @@ h1, h2, h3, h4, p, li, a {
     min-height: 100vh;
 }
 
+#signup {
+    background: url("../img/signup-bg.png") no-repeat center;
+    max-width: 100vw;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+#form {
+    margin-top: 15vh;
+}
+
+legend {
+    height: 80px;
+    padding-top: 20px;
+    margin-bottom: 0;
+    background-color: #FFC031;
+    color: #4C5964;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.form-bg {
+    background-color: white;
+}
+
+.form-control {
+    height: 50px;
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.option {
+    text-align: center;
+}
+
+
 #dev {
     text-align: center;
     margin-top: 52vh;

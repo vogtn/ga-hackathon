@@ -1,26 +1,23 @@
-<div class="col-sm-6 col-sm-offset-3">
+<div id="signup">
+
+<div class="col-sm-6 col-sm-offset-3" id="form">
 
 <form ng-submit="userSignup()">
-  <legend>Signup</legend>
-
+  <legend><p>Let's Get You Started!</p></legend>
+  <div class="form-bg">
   <div class="form-group">
-    <label for="name">Name</label>
     <input type="text" class="form-control" id="name" placeholder="Corn Name" ng-model="user.name">
   </div>
   <div class="form-group">
-    <label for="email">Email</label>
     <input type="email" class="form-control" id="email" placeholder="test@test.com" ng-model="user.email">
   </div>
   <div class="form-group">
-    <label for="password">Password</label>
     <input type="password" class="form-control" id="password" placeholder="********" ng-model="user.password">
   </div>
   <div class="form-group">
-    <label for="portfolio">Portfolio Link</label>
     <input type="text" class="form-control" id="portfolio" placeholder="Portfolio link" ng-model="user.portfolio">
   </div>
   <div class="form-group">
-    <label for="userType">What Do You Call Yourself?</label>
     <select name="userType" ng-model="user.userType">
       <option value="" disabled selected>I am a...</option>
       <option value="dev">Developer</option>
@@ -28,12 +25,10 @@
     </select>
   </div>
   <div class="form-group">
-    <label for="profilePic">Profile Picture</label>
     <input type="text" class="form-control" id="profilePic" placeholder="Image link" ng-model="user.profilePic">
   </div>
   <div class="form-group">
-    <label for="bio">Tell Us About Yourself!</label>
-    <textarea class="form-control" id="bio" ng-model="user.bio" length="200"></textarea>
+    <textarea class="form-control" id="bio" ng-model="user.bio" placeholder="Tell us about yourself..." length="200"></textarea>
   </div>
 
       <div class="devGroup" ng-show="user.userType == 'dev'">
@@ -118,9 +113,11 @@
             <label for="frontUX">Front End Design</label>
           </p>
           <!--designer close-->
+        </div>
         </div> 
 
 
   <button type="submit" class="btn btn-primary">Signup</button>
 </form>
+</div>
 </div>
