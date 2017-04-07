@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var ProjectsSchema = new mongoose.Schema({
+var ProjectSchema = mongoose.Schema({
   projectTitle: String,
   projectBody: String,
   projectDate: Date,
@@ -9,4 +9,18 @@ var ProjectsSchema = new mongoose.Schema({
   projectPic: String,
 });
 
-module.exports = mongoose.model('Notes', NotesSchema);
+ProjectSchema.set('toJSON', {
+  transform: function(doc, ret, options) {
+    var returnJson = {
+      projectTitle:     ret.projectTitle,
+      projectBody:       ret.projectBody,
+      projectDate:    ret.projectDate,
+      projectPoster:   ret.projectPoster,
+      projectPrice:       ret.projectPrice,
+      projectPic:  ret.projectPic
+    };
+    return returnJson;
+  }
+});
+
+module.exports = mongoose.model('project', ProjectSchema);
