@@ -4,7 +4,7 @@ angular.module('App')
     $scope.userId = Auth.currentUser().id;
     $scope.allProject;
 
-    ProjectFactory.getAllProjects()
+    ProjectFactory.getAllProjects($stateParams.id)
     .then(
         function success(res){
             $scope.allProject = res.data;

@@ -14,7 +14,7 @@ router.route('/')
       Project.create(req.body, function(err, projects) {
         if (err) return res.status(500).send(err);
 
-        return res.send(user);
+        return res.send(projects);
       });
   });
 
