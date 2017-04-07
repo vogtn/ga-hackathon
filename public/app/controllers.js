@@ -27,7 +27,7 @@ angular.module('AppCtrl', ['AppServices'])
             }
             $http.post("/api/auth", $scope.currentUser).then(function success(res){
                 Auth.saveToken(res.data.token);
-                $state.go("home");
+                $state.go("users");
             }, function error(err){
                 console.log("bad auth")
             })
@@ -45,7 +45,7 @@ angular.module('AppCtrl', ['AppServices'])
         // to implement
         $http.post("/api/auth", $scope.user).then(function success(res) {
         Auth.saveToken(res.data.token);
-        $state.go("home")
+        $state.go("users")
         }, function error(err) {
             console.log("Yo dawg")
         })
