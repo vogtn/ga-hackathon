@@ -24,7 +24,6 @@ angular.module('AppServices', ['ngResource'])
             try {
             // vuln code
             var payload = JSON.parse($window.atob(token.split(".")[1]));
-            console.log("payload decoded: " + payload);
             return payload;
             }
             catch (err){ 
