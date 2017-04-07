@@ -9,8 +9,7 @@
 </div>
 
 <h3>Projects</h3>
-
-<div class="well" ng-repeat="p in allProject | filter:{projectPoster: userId}">
+<div class="well" ng-repeat="p in allProject | filter:{projectPoster: user.id}">
   <p>{{p.projectTitle}}</p>
   <p>{{p.projectBody}}</p>
   <p>{{p.projectDate}}</p>
