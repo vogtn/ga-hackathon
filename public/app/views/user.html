@@ -6,8 +6,12 @@
 <h3>{{user.portfolio}}</h3>
 <br>
 <h2>Portfolio</h2>
-{{user}}
 </div>
 
+<h3>Projects</h3>
 
-{{projects}}
+<div class="well" ng-repeat="p in allProject | filter:{projectPoster: userId}">
+  <p>{{p.projectTitle}}</p>
+  <p>{{p.projectBody}}</p>
+  <p>{{p.projectDate}}</p>
+</div>
