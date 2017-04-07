@@ -1,5 +1,5 @@
 angular.module('AppCtrl', ['AppServices'])
-.controller('SignupCtrl', ['$scope', '$http', '$state', function($scope, $http, $state) {
+.controller('SignupCtrl', ['$scope', '$http', '$state', 'Auth', function($scope, $http, $state, Auth) {
     $scope.user = {
         name: '',
         email: '',
@@ -21,7 +21,16 @@ angular.module('AppCtrl', ['AppServices'])
     $scope.userSignup = function() {
         // to implement
         $http.post('/api/users', $scope.user).then(function success(res) {
-        $state.go("home");
+            $scope.currentUser = {
+                email: $scope.user.email,
+                password: $scope.user.password
+            }
+            $http.post("/api/auth", $scope.currentUser).then(function success(res){
+                Auth.saveToken(res.data.token);
+                $state.go("home");
+            }, function error(err){
+                console.log("bad auth")
+            })
         }, function error(err) {
         console.log("Error", err)
         })
