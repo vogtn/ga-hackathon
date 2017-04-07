@@ -31,6 +31,10 @@ legend {
     border-top-right-radius: 5px;
 }
 
+.navbar-link {
+    margin-left: -100px;
+}
+
 .form-bg {
     background-color: white;
     border-bottom-left-radius: 5px;
