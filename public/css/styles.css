@@ -20,6 +20,7 @@ h1, h2, h3, h4, p, li, a {
     margin-top: 15vh;
 }
 
+
 legend {
     height: 80px;
     padding-top: 20px;
@@ -50,6 +51,7 @@ legend {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 
 .form-control {
     height: 50px;
@@ -104,14 +106,37 @@ legend {
     height: 100px;
 }
 
+.homeLogo {
+    width: 564px;
+    height: 127px;
+    position: absolute;
+    margin-left: -150px;
+    margin-top: 15px;
+    background: url("../img/Logo.png") no-repeat center;
+}
+
 .navbar {
     background-color: white;
 }
 
-#dev {
+.homeGroup {
     text-align: center;
-    margin-top: 52vh;
-    
+    margin-top: 40vh;
+}
+
+.home-dev {
+    color: #FFC031;
+    margin-top: 10px;
+}
+
+.home-des {
+    color: #4C5964;
+    margin-top: 10px;
+}
+
+.homeGroup img {
+    display: block;
+    margin: 0 auto;
 }
 
 #des {
