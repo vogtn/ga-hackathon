@@ -14,7 +14,7 @@ var app = express();
 var mongoose = require('mongoose');
 var User = require('./models/user');
 var Project = require('./models/project')
-mongoose.connect('mongodb://localhost/cornhub');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/cornhub');
 
 // decode POST data in JSON and URL encoded formats
 app.use(bodyParser.json());
